@@ -12,7 +12,7 @@ type ErrorBoundarySharedProps = {
 	onError: (error: LuauPolyfill.Error, info: { componentStack: string }) -> ()?,
 	onReset: (
 		details: { reason: "imperative-api", args: { any } } | { reason: "keys", prev: { any }?, next: { any }? }
-	) -> (),
+	) -> ()?,
 	resetKeys: { any }?,
 }
 
