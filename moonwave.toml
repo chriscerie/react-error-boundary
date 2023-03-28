@@ -1,4 +1,5 @@
 gitRepoUrl = "https://github.com/chriscerie/roact-error-boundary"
+gitSourceBranch = "main"
 
 [docusaurus]
 tagline = "Error boundary for Roact based on react-error-boundary."
