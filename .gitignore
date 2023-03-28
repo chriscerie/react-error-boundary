@@ -1,0 +1,12 @@
+/*.rbxlx.lock
+/*.rbxl.lock
+
+/node_modules
+/Packages
+/DevPackages
+/build
+/roblox.toml
+/wally.lock
+/**.tgz
+/sourcemap.json
+package-lock.json
