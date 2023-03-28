@@ -4,13 +4,12 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local React = require(ReplicatedStorage.Packages.React)
 local ReactRoblox = require(ReplicatedStorage.Packages.ReactRoblox)
 local ReactErrorBoundary = require(ReplicatedStorage.Packages.ReactErrorBoundary)
-local useErrorBoundary = require(ReplicatedStorage.Packages.ReactErrorBoundary.useErrorBoundary)
 local Fallback = require(ReplicatedStorage.Stories.components.Fallback)
 
 local e = React.createElement
 
 local function WillErrorInEventHandler()
-	local errorBoundary = useErrorBoundary()
+	local errorBoundary = ReactErrorBoundary.useErrorBoundary()
 
 	React.useEffect(function()
 		task.delay(1, function()
