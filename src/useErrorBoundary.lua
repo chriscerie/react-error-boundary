@@ -9,9 +9,7 @@ export type UseErrorBoundaryApi<Error> = {
 }
 
 local function useErrorBoundary<Error>(): UseErrorBoundaryApi<Error>
-	local context = React.useContext(ErrorBoundaryContext)
-
-	assertErrorBoundaryContext(context)
+	local context = assertErrorBoundaryContext(React.useContext(ErrorBoundaryContext))
 
 	local state, setState = React.useState({
 		error = nil :: Error?,
@@ -21,9 +19,7 @@ local function useErrorBoundary<Error>(): UseErrorBoundaryApi<Error>
 	local memoized = React.useMemo(function()
 		return {
 			resetBoundary = function()
-				if context then
-					context.resetErrorBoundary()
-				end
+				context.resetErrorBoundary()
 				setState({ hasError = false })
 			end,
 			showBoundary = function(error: Error)
@@ -34,7 +30,7 @@ local function useErrorBoundary<Error>(): UseErrorBoundaryApi<Error>
 				return
 			end,
 		}
-	end, { context, context and context.resetErrorBoundary } :: { any })
+	end, { context, context.resetErrorBoundary } :: { any })
 
 	if state.hasError then
 		error(state.error)
