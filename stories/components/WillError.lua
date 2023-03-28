@@ -5,7 +5,7 @@ local React = require(ReplicatedStorage.Packages.React)
 
 local e = React.createElement
 
-local function WillError()
+local WillError: React.FC<{}> = function()
 	local shouldError, setShouldError = React.useState(false)
 
 	if shouldError then

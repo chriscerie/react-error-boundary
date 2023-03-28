@@ -32,6 +32,22 @@ local ErrorBoundary = React.Component:extend("ErrorBoundary")
 
 function ErrorBoundary:init()
 	self.state = initialState
+
+	self.resetErrorBoundary = function(...: any)
+		local args = { ... }
+		local error = self.state.error
+
+		if error then
+			if self.props.onReset then
+				self.props.onReset({
+					args = args,
+					reason = "imperative-api",
+				})
+			end
+
+			self:setState(initialState)
+		end
+	end
 end
 
 function ErrorBoundary.getDerivedStateFromError(error)
@@ -39,21 +55,6 @@ function ErrorBoundary.getDerivedStateFromError(error)
 		didCatch = true,
 		error = error,
 	}
-end
-
-function ErrorBoundary:resetErrorBoundary(args: { any })
-	local error = self.state.error
-
-	if error then
-		if self.props.onReset then
-			self.props.onReset({
-				args = args,
-				reason = "imperative-api",
-			})
-		end
-
-		self:setState(initialState)
-	end
 end
 
 function ErrorBoundary:componentDidCatch(
@@ -103,9 +104,7 @@ function ErrorBoundary:render()
 	if didCatch then
 		local props: types.FallbackProps = {
 			error = error,
-			resetErrorBoundary = function(args: { any })
-				return self:resetErrorBoundary(args)
-			end,
+			resetErrorBoundary = self.resetErrorBoundary,
 		}
 
 		if React.isValidElement(fallback) then
@@ -123,9 +122,7 @@ function ErrorBoundary:render()
 		value = {
 			didCatch = didCatch,
 			error = error,
-			resetErrorBoundary = function(args: { any })
-				return self:resetErrorBoundary(args)
-			end,
+			resetErrorBoundary = self.resetErrorBoundary,
 		},
 	}, childToRender)
 end

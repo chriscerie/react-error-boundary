@@ -1,11 +1,13 @@
 local React = require(script.Parent.Parent.React)
 local LuauPolyfill = require(script.Parent.Parent.LuauPolyfill)
 
-type FallbackRender = (props: FallbackProps) -> React.ReactNode
+-- DEVIATION: For some reason, fallbackRender in withErrorBoundary could not resolve to React.ReactNode return
+-- without type casting, so use `any` for now to avoid user needing to type cast
+type FallbackRender = (props: FallbackProps) -> any
 
 export type FallbackProps = {
 	error: LuauPolyfill.Error,
-	resetErrorBoundary: (args: { any }) -> (),
+	resetErrorBoundary: (...any) -> (),
 }
 
 type ErrorBoundarySharedProps = {
@@ -29,7 +31,9 @@ export type ErrorBoundaryPropsWithRender = ErrorBoundarySharedProps & {
 }
 
 export type ErrorBoundaryPropsWithFallback = ErrorBoundarySharedProps & {
-	fallback: React.ReactElement<unknown, string | React.ComponentType<any>>?,
+	-- DEVIATION: `any` for now due to error using withErrorBoundary
+	-- Cannot cast 'ReactElement<FallbackProps, a>' into 'ReactElement<unknown, any>' because the types are unrelated
+	fallback: any,
 	FallbackComponent: never?,
 	fallbackRender: never?,
 }

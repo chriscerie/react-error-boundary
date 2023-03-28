@@ -2,11 +2,12 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local React = require(ReplicatedStorage.Packages.React)
+local ReactErrorBoundary = require(ReplicatedStorage.Packages.ReactErrorBoundary)
 local useErrorBoundary = require(ReplicatedStorage.Packages.ReactErrorBoundary.useErrorBoundary)
 
 local e = React.createElement
 
-local function Fallback()
+local Fallback: React.FC<ReactErrorBoundary.FallbackProps> = function()
 	local errorBoundary = useErrorBoundary()
 
 	return e("TextButton", {

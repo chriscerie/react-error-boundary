@@ -5,10 +5,10 @@
 local types = require(script.types)
 
 export type FallbackProps = types.FallbackProps
-export type ErrorBoundaryProps = types.ErrorBoundaryProps
 
 return {
 	ErrorBoundary = require(script.ErrorBoundary),
 	ErrorBoundaryContext = require(script.ErrorBoundaryContext),
 	useErrorBoundary = require(script.useErrorBoundary),
+	withErrorBoundary = require(script.withErrorBoundary),
 }

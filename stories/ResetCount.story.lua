@@ -8,7 +8,7 @@ local FallbackAndReset = require(ReplicatedStorage.Stories.components.FallbackAn
 
 local e = React.createElement
 
-local function Counter(props)
+local Counter: React.FC<{ count: number, increment: () -> () }> = function(props)
 	if props.count >= 5 then
 		error(`Erroring at count: {props.count}`)
 	end
@@ -17,7 +17,7 @@ local function Counter(props)
 		AnchorPoint = Vector2.new(0.5, 0.5),
 		Size = UDim2.fromScale(0.5, 0.5),
 		Position = UDim2.fromScale(0.5, 0.5),
-		Text = `Count: {props.count}\nClick me to increment. Errors at 5, which should reset counter to 0.`,
+		Text = `Count: {props.count}\nClick me to increment. Errors at 5, which resets counter to 0.`,
 		[React.Event.Activated] = props.increment,
 	})
 end
@@ -31,7 +31,7 @@ local function Component(_)
 			setCount(0)
 		end,
 		onError = function(_error, _info)
-			print("Error encountered! Resetting count to 0.")
+			print("Error caught! Resetting count to 0.")
 		end,
 	}, {
 		Counter = e(Counter, {
