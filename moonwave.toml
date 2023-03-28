@@ -1,0 +1,33 @@
+gitRepoUrl = "https://github.com/chriscerie/roact-error-boundary"
+
+[docusaurus]
+tagline = "Error boundary for Roact based on react-error-boundary."
+
+[home]
+enabled = true
+includeReadme = false
+
+[[home.features]]
+title = "Easy to Use"
+description = "roact-error-boundary makes error handling easy. Error logging, reverting states, and displaying fallback components are all incredibly easy to implement."
+
+[[home.features]]
+title = "Flexible"
+description = "Whether you want a single error boundary to handle errors in your entire app or multiple boundaries to handle errors in individual components, the granularity is up to you."
+
+[[footer.links]]
+title = "Docs"
+
+[[footer.links]]
+title = "Community"
+
+[[footer.links.items]]
+label = "GitHub"
+href = "https://github.com/chriscerie/roact-error-boundary"
+
+[[footer.links]]
+title = "More"
+
+[[footer.links.items]]
+label = "License"
+href = "https://github.com/chriscerie/roact-spring/blob/main/LICENSE"

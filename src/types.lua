@@ -5,6 +5,30 @@ local LuauPolyfill = require(script.Parent.Parent.LuauPolyfill)
 -- without type casting, so use `any` for now to avoid user needing to type cast
 type FallbackRender = (props: FallbackProps) -> any
 
+--[=[
+	A `LuauPolyFill.Error` object to represent errors produced.
+	```lua
+	{
+		message: string,
+		name: string,
+		stack: string,
+	}
+	```
+	@class Error
+]=]
+
+--[=[
+	Props for fallback components. Fallback components should be typed like:
+	```lua
+		local Fallback: React.FC<ReactErrorBoundary.FallbackProps> = function(props)
+			-- ...
+		end
+	```
+	@interface FallbackProps
+	@within ReactErrorBoundary
+	.error Error
+	.resetErrorBoundary (...any) -> () -- Resets the error boundary and calls `onReset` if provided. This is useful for reverting state or retrying the render.
+]=]
 export type FallbackProps = {
 	error: LuauPolyfill.Error,
 	resetErrorBoundary: (...any) -> (),

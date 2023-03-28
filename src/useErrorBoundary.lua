@@ -3,11 +3,22 @@ local React = require(script.Parent.Parent.React)
 local ErrorBoundaryContext = require(script.Parent.ErrorBoundaryContext)
 local assertErrorBoundaryContext = require(script.Parent.assertErrorBoundaryContext)
 
+--[=[
+	@interface UseErrorBoundaryApi
+	@within ReactErrorBoundary
+	.resetBoundary () -> ()
+	.showBoundary (error: Error) -> ()
+]=]
 export type UseErrorBoundaryApi<Error> = {
 	resetBoundary: () -> (),
 	showBoundary: (error: Error) -> (),
 }
 
+--[=[
+	TODO: Undocumented
+	@function useErrorBoundary
+	@within ReactErrorBoundary
+]=]
 local function useErrorBoundary<Error>(): UseErrorBoundaryApi<Error>
 	local context = assertErrorBoundaryContext(React.useContext(ErrorBoundaryContext))
 
