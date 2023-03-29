@@ -51,7 +51,7 @@ end
 	message or revert states.
 
 	#### Using FallbackComponent prop
-	See [ErrorIn1SecondFallbackComponent](https://github.com/chriscerie/roact-error-boundary/blob/main/stories/ErrorIn1SecondFallbackComponent.story.lua) for a full example.
+	See [ErrorIn1SecondFallbackComponent](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondFallbackComponent.story.lua) for a full example.
 	```lua
 		return e(ReactErrorBoundary.ErrorBoundary, {
 			FallbackComponent = Fallback,
@@ -64,7 +64,7 @@ end
 	[Render prop](https://react.dev/reference/react/Children#calling-a-render-prop-to-customize-rendering) function that returns the fallback UI.
 	This is helpful if you want to handle errors differently based on the error.
 
-	See [ErrorIn1SecondFallbackComponent](https://github.com/chriscerie/roact-error-boundary/blob/main/stories/ErrorIn1SecondFallbackRender.story.lua) for a full example.
+	See [ErrorIn1SecondFallbackComponent](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondFallbackRender.story.lua) for a full example.
 	
 	:::caution
 	Render prop functions are normal functions and are not React components. Attempting to use hooks in them will error!
@@ -81,7 +81,7 @@ end
 	```
 
 	#### Using fallback prop
-	See [ErrorIn1SecondFallback](https://github.com/chriscerie/roact-error-boundary/blob/main/stories/ErrorIn1SecondFallback.story.lua) for a full example.
+	See [ErrorIn1SecondFallback](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondFallback.story.lua) for a full example.
 
 	:::caution
 	This creates the fallback element even when it's not needed.
@@ -113,7 +113,7 @@ end
 	When passed, `onReset` gets called when the error boundary is reset by a call to `resetErrorBoundary` or when the `resetKeys` change.
 	This is useful for reverting state.
 
-	See [ResetCount](https://github.com/chriscerie/roact-error-boundary/blob/main/stories/ResetCount.story.lua) for a full example.
+	See [ResetCount](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ResetCount.story.lua) for a full example.
 	
 	```lua
 		return e(ReactErrorBoundary.ErrorBoundary, {
@@ -217,7 +217,7 @@ function ErrorBoundary:render()
 		elseif FallbackComponent then
 			childToRender = React.createElement(FallbackComponent, props)
 		else
-			error("roact-error-boundary requires either a fallback, fallbackRender, or FallbackComponent prop")
+			error("react-error-boundary requires either a fallback, fallbackRender, or FallbackComponent prop")
 		end
 	end
 

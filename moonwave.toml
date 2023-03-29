@@ -1,4 +1,4 @@
-gitRepoUrl = "https://github.com/chriscerie/roact-error-boundary"
+gitRepoUrl = "https://github.com/chriscerie/react-error-boundary"
 gitSourceBranch = "main"
 
 [docusaurus]
@@ -10,7 +10,7 @@ includeReadme = false
 
 [[home.features]]
 title = "Easy to Use"
-description = "roact-error-boundary makes error handling easy. Error logging, reverting states, and displaying fallback components are all incredibly easy to implement."
+description = "react-error-boundary makes error handling easy. Error logging, reverting states, and displaying fallback components are all incredibly easy to implement."
 
 [[home.features]]
 title = "Flexible"
@@ -24,11 +24,11 @@ title = "Community"
 
 [[footer.links.items]]
 label = "GitHub"
-href = "https://github.com/chriscerie/roact-error-boundary"
+href = "https://github.com/chriscerie/react-error-boundary"
 
 [[footer.links]]
 title = "More"
 
 [[footer.links.items]]
 label = "License"
-href = "https://github.com/chriscerie/roact-error-boundary/blob/main/LICENSE"
+href = "https://github.com/chriscerie/react-error-boundary/blob/main/LICENSE"

@@ -6,7 +6,7 @@ local types = require(script.Parent.types)
 
 --[=[
     This is a higher-order component that makes it easy to add an error boundary to an existing component. See
-    [ErrorIn1SecondHOC](https://github.com/chriscerie/roact-error-boundary/blob/main/stories/ErrorIn1SecondHOC.story.lua) for a full example.
+    [ErrorIn1SecondHOC](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondHOC.story.lua) for a full example.
 
     :::note
     If using luau strict mode, the component must be typed using `local Component: React.FC<{ <prop-types> }> = function(props)`

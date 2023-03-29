@@ -59,10 +59,10 @@ export type UseErrorBoundaryApi<Error> = {
 	invokes the boundary's `onReset` callback.
 
 	A pattern is to just retry the render blindly and hope it succeeds on the second try. See
-	[RetryError](https://github.com/chriscerie/roact-error-boundary/blob/main/stories/RetryError.story.lua) for a full example.
+	[RetryError](https://github.com/chriscerie/react-error-boundary/blob/main/stories/RetryError.story.lua) for a full example.
 
 	A more common pattern is to revert some state and retry the render with the reverted state. See
-	[ResetCount](https://github.com/chriscerie/roact-error-boundary/blob/main/stories/ResetCount.story.lua) for a full example.
+	[ResetCount](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ResetCount.story.lua) for a full example.
 
 	@within ReactErrorBoundary
 ]=]

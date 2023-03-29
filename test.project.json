@@ -1,5 +1,5 @@
 {
-	"name": "roact-error-boundary-test",
+	"name": "react-error-boundary-test",
 	"tree": {
 		"$className": "DataModel",
 		"ReplicatedStorage": {

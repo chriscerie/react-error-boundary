@@ -1,5 +1,5 @@
 [package]
-name = "chriscerie/roact-error-boundary"
+name = "chriscerie/react-error-boundary"
 description = "Error boundary component based on react-error-boundary"
 version = "0.0.1"
 license = "MIT"
