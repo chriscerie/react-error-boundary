@@ -5,8 +5,9 @@ local ErrorBoundary = require(script.Parent.ErrorBoundary)
 local types = require(script.Parent.types)
 
 --[=[
-	TODO: Undocumented
-	@function withErrorBoundary
+	This is a higher-order component that makes it easy to add an error boundary to an existing component. See
+    [ErrorIn1SecondHOC](https://github.com/chriscerie/roact-error-boundary/blob/main/stories/ErrorIn1SecondHOC.story.lua) for a full example.
+
 	@within ReactErrorBoundary
 ]=]
 local function withErrorBoundary<Props>(component: React.ComponentType<Props>, errorBoundaryProps: types.ErrorBoundaryProps)

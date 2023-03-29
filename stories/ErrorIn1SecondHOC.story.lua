@@ -9,10 +9,12 @@ local Fallback = require(ReplicatedStorage.Stories.components.Fallback)
 
 local e = React.createElement
 
-local function Component(_)
-	return e(ReactErrorBoundary.withErrorBoundary(WillError, {
-		FallbackComponent = Fallback,
-	}))
+local WillErrorWithErrorBoundary = ReactErrorBoundary.withErrorBoundary(WillError, {
+	FallbackComponent = Fallback,
+})
+
+local function Component()
+	return e(WillErrorWithErrorBoundary)
 end
 
 return function(target)
