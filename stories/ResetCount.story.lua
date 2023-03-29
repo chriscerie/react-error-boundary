@@ -22,6 +22,8 @@ local Counter: React.FC<{ count: number, increment: () -> () }> = function(props
 	})
 end
 
+-- Using `onReset` to revert state to a known good state is a common approach. Here the button increments the count on press,
+-- and errors at count 5. The error is caught by the error boundary, and the count is reset to 0.
 local function Component(_)
 	local count, setCount = React.useState(0)
 

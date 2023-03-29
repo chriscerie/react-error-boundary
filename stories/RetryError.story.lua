@@ -9,6 +9,8 @@ local WillError = require(ReplicatedStorage.Stories.components.WillError)
 
 local e = React.createElement
 
+-- After erroring, the fallback component renders a button that calls `resetBoundary()` when pressed, which renders the
+-- `WillError` component again, which will error and render the fallback button again, and so on.
 local function Component(_)
 	return e(ReactErrorBoundary.ErrorBoundary, {
 		FallbackComponent = FallbackWithRetryButton,
