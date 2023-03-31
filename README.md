@@ -5,7 +5,7 @@
 </a>
 
 <h1 align="center">react-error-boundary</h1>
-<h3 align="center">A robust error boundary library for [Lua React](https://github.com/grilme99/CorePackages).</h3>
+<h3 align="center">A robust error boundary library for <a href="https://github.com/grilme99/CorePackages">Lua React</a>.</h3>
 
 <br>
 
