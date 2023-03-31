@@ -32,10 +32,6 @@ href = "/docs/intro"
 label = "Getting Started"
 href = "/docs/GettingStarted"
 
-[[footer.links.items]]
-label = "API Reference"
-href = "/docs/api"
-
 [[footer.links]]
 title = "Community"
 
