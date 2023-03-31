@@ -1,6 +1,11 @@
 gitRepoUrl = "https://github.com/chriscerie/react-error-boundary"
 gitSourceBranch = "main"
 
+classOrder = [
+    "ReactErrorBoundary",
+    "Error"
+]
+
 [docusaurus]
 tagline = "Error boundary for Roact based on react-error-boundary."
 
@@ -18,6 +23,18 @@ description = "Whether you want a single error boundary to handle errors in your
 
 [[footer.links]]
 title = "Docs"
+
+[[footer.links.items]]
+label = "Introduction"
+href = "/docs/intro"
+
+[[footer.links.items]]
+label = "Getting Started"
+href = "/docs/GettingStarted"
+
+[[footer.links.items]]
+label = "API Reference"
+href = "/docs/api"
 
 [[footer.links]]
 title = "Community"
