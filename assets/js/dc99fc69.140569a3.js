@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[340],{63891:r=>{r.exports=JSON.parse('{"sourceUrl":"https://github.com/chriscerie/react-error-boundary/blob/main","baseUrl":"/react-error-boundary/","classOrder":[],"apiCategories":[]}')}}]);
