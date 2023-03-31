@@ -55,9 +55,7 @@ export type ErrorBoundaryPropsWithRender = ErrorBoundarySharedProps & {
 }
 
 export type ErrorBoundaryPropsWithFallback = ErrorBoundarySharedProps & {
-	-- DEVIATION: `any` for now due to error using withErrorBoundary
-	-- Cannot cast 'ReactElement<FallbackProps, a>' into 'ReactElement<unknown, any>' because the types are unrelated
-	fallback: any,
+	fallback: React.ReactElement<any, any>,
 	FallbackComponent: never?,
 	fallbackRender: never?,
 }

@@ -1,19 +1,31 @@
 --!strict
 local React = require(script.Parent.Parent.React)
 local Collections = require(script.Parent.Parent.Collections)
-local LuauPolyfill = require(script.Parent.Parent.LuauPolyfill)
 local ErrorBoundaryContext = require(script.Parent.ErrorBoundaryContext)
 local types = require(script.Parent.types)
 
-type ErrorBoundaryState = {
-	didCatch: boolean,
-	error: { LuauPolyfill.Error }?,
+type PropsWithChildren<T> = T & {
+	children: any,
 }
 
-local initialState: ErrorBoundaryState = {
+type PropsWithRef<T> = T & {
+	ref: any,
+}
+
+type ErrorBoundaryState = {
+	didCatch: boolean,
+	error: any,
+}
+
+local initialState: ErrorBoundaryState = table.freeze({
 	didCatch = false,
 	error = nil,
-}
+})
+
+local initialStateWithReactNone = table.freeze({
+	didCatch = false,
+	error = React.None,
+})
 
 local function hasArrayChanged(a: { any }?, b: { any }?)
 	a = a or {}
@@ -131,7 +143,8 @@ end
 	@function ErrorBoundary
 	@within ReactErrorBoundary
 ]=]
-local ErrorBoundary = React.Component:extend("ErrorBoundary")
+local ErrorBoundary: React.React_Component<PropsWithRef<PropsWithChildren<types.ErrorBoundaryProps>>, ErrorBoundaryState> =
+	React.Component:extend("ErrorBoundary")
 
 function ErrorBoundary:init()
 	self.state = initialState
@@ -148,7 +161,7 @@ function ErrorBoundary:init()
 				})
 			end
 
-			self:setState(initialState)
+			self:setState(initialStateWithReactNone)
 		end
 	end
 end
@@ -189,7 +202,7 @@ function ErrorBoundary:componentDidUpdate(prevProps: types.ErrorBoundaryProps, p
 			})
 		end
 
-		self:setState(initialState)
+		self:setState(initialStateWithReactNone)
 	end
 end
 
@@ -205,12 +218,12 @@ function ErrorBoundary:render()
 	local childToRender = children
 
 	if didCatch then
-		local props: types.FallbackProps = {
+		local props: types.FallbackProps = table.freeze({
 			error = error,
 			resetErrorBoundary = self.resetErrorBoundary,
-		}
+		})
 
-		if React.isValidElement(fallback) then
+		if fallback and React.isValidElement(fallback) then
 			childToRender = fallback
 		elseif typeof(fallbackRender) == "function" then
 			childToRender = fallbackRender(props)

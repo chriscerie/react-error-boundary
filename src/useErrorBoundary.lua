@@ -75,7 +75,7 @@ local function useErrorBoundary<E>(): UseErrorBoundaryApi<E>
 	})
 
 	local memoized = React.useMemo(function()
-		return {
+		return table.freeze({
 			resetBoundary = function()
 				context.resetErrorBoundary()
 				setState({ hasError = false })
@@ -87,7 +87,7 @@ local function useErrorBoundary<E>(): UseErrorBoundaryApi<E>
 				})
 				return
 			end,
-		}
+		})
 	end, { context, context.resetErrorBoundary } :: { any })
 
 	if state.hasError then

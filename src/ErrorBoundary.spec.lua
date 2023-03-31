@@ -53,7 +53,7 @@ return function()
 				errorBoundaryRef = React.createRef()
 			end)
 
-			local function render(props: types.ErrorBoundaryPropsWithFallback)
+			local function render(props)
 				act(function()
 					root:render(e(
 						ErrorBoundary,
@@ -145,7 +145,7 @@ return function()
 		end)
 
 		describe('"fallback" element', function()
-			local function render(props: types.ErrorBoundaryPropsWithFallback?)
+			local function render(props)
 				act(function()
 					props = props or {}
 					root:render(e(

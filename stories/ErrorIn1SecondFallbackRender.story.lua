@@ -9,7 +9,7 @@ local Fallback = require(ReplicatedStorage.Stories.components.Fallback)
 
 local e = React.createElement
 
-local function Component(_)
+local Component: React.FC<{}> = function(_props)
 	return e(ReactErrorBoundary.ErrorBoundary, {
 		fallbackRender = function()
 			return e(Fallback)

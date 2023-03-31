@@ -17,7 +17,8 @@ local types = require(script.Parent.types)
 ]=]
 local function withErrorBoundary<Props>(component: React.ComponentType<Props>, errorBoundaryProps: types.ErrorBoundaryProps)
 	local Wrapped = React.forwardRef(function(props: Props, ref)
-		return React.createElement(ErrorBoundary, errorBoundaryProps, {
+		-- Luau thinks types.ErrorBoundaryProps cannot be converted
+		return React.createElement(ErrorBoundary, errorBoundaryProps :: any, {
 			component = React.createElement(component, Sift.Dictionary.merge(props, { ref = ref })),
 		})
 	end)

@@ -25,9 +25,9 @@ local function WillErrorInEventHandler()
 	})
 end
 
-local function Component(_)
+local Component: React.FC<{}> = function(_props)
 	return e(ReactErrorBoundary.ErrorBoundary, {
-		FallbackComponent = Fallback,
+		fallback = e(Fallback),
 	}, {
 		WillErrorInEventHandler = e(WillErrorInEventHandler),
 	})

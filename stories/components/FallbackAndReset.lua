@@ -8,9 +8,17 @@ local e = React.createElement
 
 local FallbackAndReset: React.FC<ReactErrorBoundary.FallbackProps> = function(props)
 	React.useEffect(function()
+		local shouldReset = true
+
 		task.delay(2, function()
-			props.resetErrorBoundary()
+			if shouldReset then
+				props.resetErrorBoundary()
+			end
 		end)
+
+		return function()
+			shouldReset = false
+		end
 	end, { props.resetErrorBoundary })
 
 	return e("TextLabel", {

@@ -11,7 +11,7 @@ local e = React.createElement
 
 -- After erroring, the fallback component renders a button that calls `resetBoundary()` when pressed, which renders the
 -- `WillError` component again, which will error and render the fallback button again, and so on.
-local function Component(_)
+local Component: React.FC<{}> = function(_props)
 	return e(ReactErrorBoundary.ErrorBoundary, {
 		FallbackComponent = FallbackWithRetryButton,
 	}, {
