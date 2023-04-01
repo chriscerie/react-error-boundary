@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Introduction
 
-<b>react-error-boundary</b> is a robust error boundary library for [Lua React](https://github.com/grilme99/CorePackages). It makes error logging, reverting states, and displaying fallback components incredibly easy to implement.
+**react-error-boundary** is a robust error boundary library for [Lua React](https://github.com/grilme99/CorePackages). It makes error logging, reverting states, and displaying fallback components incredibly easy to implement.
 
 ## Installation
 
