@@ -3,9 +3,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local React = require(ReplicatedStorage.Packages.React)
 local ReactRoblox = require(ReplicatedStorage.Packages.ReactRoblox)
-local Sift = require(ReplicatedStorage.Packages.Sift)
 local withErrorBoundary = require(script.Parent.withErrorBoundary)
-local types = require(script.Parent.types)
 
 local e = React.createElement
 

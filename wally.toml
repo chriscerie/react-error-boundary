@@ -1,18 +1,16 @@
 [package]
 name = "chriscerie/react-error-boundary"
 description = "Error boundary component based on react-error-boundary"
-version = "0.0.1"
+version = "0.1.0"
 license = "MIT"
 authors = ["chriscerie"]
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
-Promise = "evaera/promise@^4.0"
 TestEZ = "roblox/testez@^0.4"
 React ="core-packages/react@17.0.1-rc.16"
 ReactRoblox = "core-packages/react-roblox@17.0.1-rc.16"
 LuauPolyfill = "core-packages/luau-polyfill@^1.1"
 Collections = "core-packages/collections@^1.1"
-ES7Types = "core-packages/es-7-types@^1.1"
 Sift = "csqrl/sift@^0.0"
