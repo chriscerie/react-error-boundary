@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Introduction
 
-<b>react-error-boundary</b> is a reusable error boundary component library for Roact inspired by react-spring. It makes error logging, reverting states, and displaying fallback components incredibly easy to implement.
+<b>react-error-boundary</b> is a robust error boundary library for [Lua React](https://github.com/grilme99/CorePackages). It makes error logging, reverting states, and displaying fallback components incredibly easy to implement.
 
 ## Installation
 
@@ -13,7 +13,7 @@ sidebar_position: 1
 Add the latest version of react-error-boundary to your `wally.toml`:
 
 ```console
-RoactSpring = "chriscerie/react-spring@<version>"
+ReactErrorBoundary = "chriscerie/react-error-boundary@<version>"
 ```
 
 ## Why react-error-boundary

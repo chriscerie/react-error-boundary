@@ -1,6 +1,6 @@
 [package]
 name = "chriscerie/react-error-boundary"
-description = "Error boundary component based on react-error-boundary"
+description = "A robust error boundary library for Lua React."
 version = "0.1.0"
 license = "MIT"
 authors = ["chriscerie"]

@@ -8,7 +8,7 @@ classOrder = [
 ]
 
 [docusaurus]
-tagline = "Error boundary for Roact based on react-error-boundary."
+tagline = "A robust error boundary library for Lua React."
 
 [home]
 enabled = true
