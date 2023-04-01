@@ -36,4 +36,5 @@ This was a very basic example. In a real application, you might want the fallbac
 
 ## Next steps
 
-Check out the [API reference](/api)
+Check out the [API reference](/api). First, read the usage of the main [ErrorBoundary](/api/ErrorBoundary) component.
+Then learn the [useErrorBoundary](/api/ReactErrorBoundary#useErrorBoundary) hook.

@@ -41,6 +41,10 @@ local function hasArrayChanged(a: { any }?, b: { any }?)
 end
 
 --[=[
+	```lua
+	React.React_Component<PropsWithRef<PropsWithChildren<ErrorBoundaryProps>>, ErrorBoundaryState>
+	```
+
 	This is a React component. Wrap an `ErrorBoundary` around other React components to "catch" errors
 	and render a fallback UI. The component supports several ways to render a fallback (shown below).
 
@@ -62,50 +66,11 @@ end
 	the [granularity of error boundaries](https://aweary.dev/fault-tolerance-react/) and where it makes sense to display an error
 	message or revert states.
 
-	#### Using FallbackComponent prop
-	See [ErrorIn1SecondFallbackComponent](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondFallbackComponent.story.lua) for a full example.
-	```lua
-		return e(ReactErrorBoundary.ErrorBoundary, {
-			FallbackComponent = Fallback,
-		}, {
-			ComponentThatErrors = e(ComponentThatErrors),
-		})
-	```
-
-	#### Using fallbackRender prop
-	[Render prop](https://react.dev/reference/react/Children#calling-a-render-prop-to-customize-rendering) function that returns the fallback UI.
-	This is helpful if you want to handle errors differently based on the error.
-
-	See [ErrorIn1SecondFallbackComponent](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondFallbackRender.story.lua) for a full example.
-	
-	:::caution
-	Render prop functions are normal functions and are not React components. Attempting to use hooks in them will error!
-	:::
-
-	```lua
-		return e(ReactErrorBoundary.ErrorBoundary, {
-			fallbackRender = function(props: ReactErrorBoundary.FallbackProps)
-				return e(Fallback)
-			end,
-		}, {
-			ComponentThatErrors = e(ComponentThatErrors),
-		})
-	```
-
-	#### Using fallback prop
-	See [ErrorIn1SecondFallback](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondFallback.story.lua) for a full example.
-
-	:::caution
-	This creates the fallback element even when it's not needed.
-	:::
-
-	```lua
-		return e(ReactErrorBoundary.ErrorBoundary, {
-			fallback = e(Fallback),
-		}, {
-			ComponentThatErrors = e(ComponentThatErrors),
-		})
-	```
+	`ErrorBoundary` requires a fallback component to be passed in as props. There are 3 ways to pass fallback components. See their
+	types documentation for usage:
+	* [ErrorBoundaryPropsWithComponent](/api/ErrorBoundary#ErrorBoundaryPropsWithComponent)
+	* [ErrorBoundaryPropsWithRender](/api/ErrorBoundary#ErrorBoundaryPropsWithRender)
+	* [ErrorBoundaryPropsWithFallback](/api/ErrorBoundary#ErrorBoundaryPropsWithFallback)
 
 	#### onError
 	When passed, `onError` gets called when an error is caught. This is useful for logging errors.
@@ -140,8 +105,7 @@ end
 			ComponentThatErrors = e(ComponentThatErrors),
 		})
 	```
-	@function ErrorBoundary
-	@within ReactErrorBoundary
+	@class ErrorBoundary
 ]=]
 local ErrorBoundary: React.React_Component<PropsWithRef<PropsWithChildren<types.ErrorBoundaryProps>>, ErrorBoundaryState> =
 	React.Component:extend("ErrorBoundary")

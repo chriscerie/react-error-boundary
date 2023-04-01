@@ -7,11 +7,13 @@ local ErrorBoundaryContext = require(script.ErrorBoundaryContext)
 local useErrorBoundary = require(script.useErrorBoundary)
 
 export type FallbackProps = types.FallbackProps
+export type ErrorBoundaryProps = types.ErrorBoundaryProps
 export type ErrorBoundaryContextType = ErrorBoundaryContext.ErrorBoundaryContextType
 export type UseErrorBoundaryApi<Error> = useErrorBoundary.UseErrorBoundaryApi<Error>
 
 --[=[
-	Error boundary for Roact based on react-error-boundary.
+	Robust error boundary library for Lua React based on react-error-boundary.
+	See [ErrorBoundary](/api/ErrorBoundary) for the main component usage.
 	@class ReactErrorBoundary
 ]=]
 return {

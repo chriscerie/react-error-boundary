@@ -3,6 +3,7 @@ gitSourceBranch = "main"
 
 classOrder = [
     "ReactErrorBoundary",
+    "ErrorBoundary",
     "Error"
 ]
 
