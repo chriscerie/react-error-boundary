@@ -5,9 +5,9 @@
 <meta name="generator" content="Docusaurus v2.3.1">
 <title data-rh="true">ReactErrorBoundary | react-error-boundary</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://chriscerie.github.io/react-error-boundary/api/ReactErrorBoundary"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="ReactErrorBoundary | react-error-boundary"><meta data-rh="true" name="description" content="Robust error boundary library for Lua React based on react-error-boundary.
 See [ErrorBoundary](/api/ErrorBoundary) for the main component usage."><meta data-rh="true" property="og:description" content="Robust error boundary library for Lua React based on react-error-boundary.
-See [ErrorBoundary](/api/ErrorBoundary) for the main component usage."><link data-rh="true" rel="canonical" href="https://chriscerie.github.io/react-error-boundary/api/ReactErrorBoundary"><link data-rh="true" rel="alternate" href="https://chriscerie.github.io/react-error-boundary/api/ReactErrorBoundary" hreflang="en"><link data-rh="true" rel="alternate" href="https://chriscerie.github.io/react-error-boundary/api/ReactErrorBoundary" hreflang="x-default"><link rel="stylesheet" href="/react-error-boundary/assets/css/styles.9b3dbd17.css">
-<link rel="preload" href="/react-error-boundary/assets/js/runtime~main.74f4fbdf.js" as="script">
-<link rel="preload" href="/react-error-boundary/assets/js/main.1193b8e0.js" as="script">
+See [ErrorBoundary](/api/ErrorBoundary) for the main component usage."><link data-rh="true" rel="canonical" href="https://chriscerie.github.io/react-error-boundary/api/ReactErrorBoundary"><link data-rh="true" rel="alternate" href="https://chriscerie.github.io/react-error-boundary/api/ReactErrorBoundary" hreflang="en"><link data-rh="true" rel="alternate" href="https://chriscerie.github.io/react-error-boundary/api/ReactErrorBoundary" hreflang="x-default"><link rel="stylesheet" href="/react-error-boundary/assets/css/styles.fdfd902f.css">
+<link rel="preload" href="/react-error-boundary/assets/js/runtime~main.3f298558.js" as="script">
+<link rel="preload" href="/react-error-boundary/assets/js/main.87ec36c4.js" as="script">
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function e(e){document.documentElement.setAttribute("data-theme",e)}var t=function(){var e=null;try{e=localStorage.getItem("theme")}catch(e){}return e}();null!==t?e(t):window.matchMedia("(prefers-color-scheme: dark)").matches?e("dark"):(window.matchMedia("(prefers-color-scheme: light)").matches,e("light"))}()</script><div id="__docusaurus">
@@ -24,7 +24,25 @@ See [ErrorBoundary](/api/ErrorBoundary) for the main component usage."><link dat
 		<span class="token comment">-- ...</span>
 	<span class="token keyword">end</span>
 </code></pre>
-</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useErrorBoundary"><code style="text-decoration:none">useErrorBoundary</code><a href="#useErrorBoundary" class="hash-link" aria-label="Direct link to useErrorBoundary" title="Direct link to useErrorBoundary">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/chriscerie/react-error-boundary/blob/main/src/useErrorBoundary.lua#L69"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ReactErrorBoundary<!-- -->.</code><code class="green_DgR4">useErrorBoundary</code><code>(</code><code>) → </code><code class="blue_P4bS">UseErrorBoundaryApi</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">E</code><code class="op_lSLc">&gt;</code></div><h3>Types</h3><h3 class="anchor anchorWithStickyNavbar_LWe7" id="UseErrorBoundaryApi&lt;E&gt;"><a href="#UseErrorBoundaryApi&lt;E&gt;" class="hash-link" aria-label="Direct link to UseErrorBoundaryApi&lt;E&gt;" title="Direct link to UseErrorBoundaryApi&lt;E&gt;">​</a></h3><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>UseErrorBoundaryApi&lt;E&gt;<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>resetBoundary<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div><code>showBoundary<!-- -->: </code><code class="purple_ieR2">(</code><code>error<!-- -->: </code><code class="blue_P4bS">E</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div></div><code>}</code></div><div></div><div>
+</div><h2 class="anchor anchorWithStickyNavbar_LWe7" id="functions">Functions<a href="#functions" class="hash-link" aria-label="Direct link to Functions" title="Direct link to Functions">​</a></h2><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="withErrorBoundary"><code style="text-decoration:none">withErrorBoundary</code><a href="#withErrorBoundary" class="hash-link" aria-label="Direct link to withErrorBoundary" title="Direct link to withErrorBoundary">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/chriscerie/react-error-boundary/blob/main/src/withErrorBoundary.lua#L18"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ReactErrorBoundary<!-- -->.</code><code class="green_DgR4">withErrorBoundary</code><code>(</code><div class="inset_uKQm"><div><code>component<!-- -->: </code><code class="blue_P4bS">React.ComponentType</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">Props</code><code class="op_lSLc">&gt;</code><code>,</code></div><div><code>errorBoundaryProps<!-- -->: </code><code class="blue_P4bS">types.ErrorBoundaryProps</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
+<p>
+  This is a higher-order component that makes it easy to add an error boundary to an existing component. See
+  <a href="https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondHOC.story.lua" target="_blank">ErrorIn1SecondHOC</a> for a full example.
+</p>
+<div class="admonition admonition-note alert alert--secondary">
+  <div class="admonition-heading">
+    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
+          <path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path>
+        </svg></span>note</h5>
+  </div>
+  <div class="admonition-content">
+    <p>
+      If using luau strict mode, the component must be typed using <code>local Component: React.FC&#x3C;{ &#x3C;prop-types> }> = function(props)</code>
+      for types to work.
+    </p>
+  </div>
+</div>
+</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="useErrorBoundary"><code style="text-decoration:none">useErrorBoundary</code><a href="#useErrorBoundary" class="hash-link" aria-label="Direct link to useErrorBoundary" title="Direct link to useErrorBoundary">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/chriscerie/react-error-boundary/blob/main/src/useErrorBoundary.lua#L69"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ReactErrorBoundary<!-- -->.</code><code class="green_DgR4">useErrorBoundary</code><code>(</code><code>) → </code><code class="blue_P4bS">UseErrorBoundaryApi</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">E</code><code class="op_lSLc">&gt;</code></div><h3>Types</h3><h3 class="anchor anchorWithStickyNavbar_LWe7" id="UseErrorBoundaryApi&lt;E&gt;"><a href="#UseErrorBoundaryApi&lt;E&gt;" class="hash-link" aria-label="Direct link to UseErrorBoundaryApi&lt;E&gt;" title="Direct link to UseErrorBoundaryApi&lt;E&gt;">​</a></h3><div class="memberString_GwaU"><code class="purple_ieR2">interface</code> <code>UseErrorBoundaryApi&lt;E&gt;<!-- --> <!-- -->{</code><div class="inset_uKQm"><div><code>resetBoundary<!-- -->: </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div><div><code>showBoundary<!-- -->: </code><code class="purple_ieR2">(</code><code>error<!-- -->: </code><code class="blue_P4bS">E</code><code class="purple_ieR2">)</code><code class="purple_ieR2"> → </code><code class="purple_ieR2">(</code><code class="purple_ieR2">)</code></div></div><code>}</code></div><div></div><div>
 <p>Convenient hook for imperatively invoking or resetting error boundaries.</p>
 <h4>Invoking the nearest error boundary from an event handler</h4>
 <p>
@@ -72,42 +90,8 @@ See [ErrorBoundary](/api/ErrorBoundary) for the main component usage."><link dat
   A more common pattern is to revert some state and retry the render with the reverted state. See
   <a href="https://github.com/chriscerie/react-error-boundary/blob/main/stories/ResetCount.story.lua" target="_blank">ResetCount</a> for a full example.
 </p>
-</div><div class="divider_rE5g"></div><h3 class="anchor anchorWithStickyNavbar_LWe7" id="withErrorBoundary"><code style="text-decoration:none">withErrorBoundary</code><a href="#withErrorBoundary" class="hash-link" aria-label="Direct link to withErrorBoundary" title="Direct link to withErrorBoundary">​</a></h3><div class="repositoryDetailsContainer_BPdw"><a class="sourceButton_sEho" href="https://github.com/chriscerie/react-error-boundary/blob/main/src/withErrorBoundary.lua#L18"><div class="sourceButtonText_Vh0m">&lt;/&gt;</div></a></div><div class="memberString_GwaU"><code>ReactErrorBoundary<!-- -->.</code><code class="green_DgR4">withErrorBoundary</code><code>(</code><div class="inset_uKQm"><div><code>component<!-- -->: </code><code class="blue_P4bS">React.ComponentType</code><code class="op_lSLc">&lt;</code><code class="blue_P4bS">Props</code><code class="op_lSLc">&gt;</code><code>,</code></div><div><code>errorBoundaryProps<!-- -->: </code><code class="blue_P4bS">types.ErrorBoundaryProps</code></div></div><code>) → </code><code>(</code><code>)</code></div><div>
-<p>
-  This is a higher-order component that makes it easy to add an error boundary to an existing component. See
-  <a href="https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondHOC.story.lua" target="_blank">ErrorIn1SecondHOC</a> for a full example.
-</p>
-<div class="admonition admonition-note alert alert--secondary">
-  <div class="admonition-heading">
-    <h5><span class="admonition-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
-          <path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path>
-        </svg></span>note</h5>
-  </div>
-  <div class="admonition-content">
-    <p>
-      If using luau strict mode, the component must be typed using <code>local Component: React.FC&#x3C;{ &#x3C;prop-types> }> = function(props)</code>
-      for types to work.
-    </p>
-  </div>
-</div>
 </div></div></article></div><details><summary>Show raw api</summary><pre style="max-width:100%;white-space:pre-wrap">{
     &quot;functions&quot;: [
-        {
-            &quot;name&quot;: &quot;useErrorBoundary&quot;,
-            &quot;desc&quot;: &quot;Convenient hook for imperatively invoking or resetting error boundaries.\n\n#### Invoking the nearest error boundary from an event handler\n\nReact only handles errors thrown during render or during component lifecycle methods (e.g., useEffect, componentDidMount).\nError thrown in event handlers or in separate lua threads will not be automatically caught.\n\nA convenient pattern is to invoke the nearest error boundary when an error occurs in event handlers or in separate lua threads.\n\n```lua\n\tlocal Example: React.FC&lt;{}&gt; = function()\n\t\tlocal errorBoundary = useErrorBoundary()\n\n\t\tuseEffect(function()\n\t\t\t-- Using promises\n\t\t\tfetchPlayerData(name):andThen(function(res)\n\t\t\t\t-- Set data in state to rerender\n\t\t\tend):catch(function(error)\n\t\t\t\t-- Our promise failed, so invoke the nearest error boundary to handle the error\n\t\t\t\terrorBoundary.showBoundary(error)\n\t\t\tend)\n\n\t\t\t-- Using pcall\n\t\t\ttask.defer(function()\n\t\t\t\tlocal success, res = pcall(function()\n\t\t\t\t\t-- Do something that might throw an error\n\t\t\t\tend)\n\n\t\t\t\tif not success then\n\t\t\t\t\terrorBoundary.showBoundary(res)\n\t\t\t\tend\n\t\t\tend)\n\t\tend)\n\n\t\t-- Render ...\n\tend\n```\n\n#### Resetting the nearest error boundary\n\n`resetBoundary()` requests the nearest boundary to retry the render that originally failed and if passed,\ninvokes the boundary&#x27;s `onReset` callback.\n\nA pattern is to just retry the render blindly and hope it succeeds on the second try. See\n[RetryError](https://github.com/chriscerie/react-error-boundary/blob/main/stories/RetryError.story.lua) for a full example.\n\nA more common pattern is to revert some state and retry the render with the reverted state. See\n[ResetCount](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ResetCount.story.lua) for a full example.&quot;,
-            &quot;params&quot;: [],
-            &quot;returns&quot;: [
-                {
-                    &quot;desc&quot;: &quot;&quot;,
-                    &quot;lua_type&quot;: &quot;UseErrorBoundaryApi&lt;E&gt;\n&quot;
-                }
-            ],
-            &quot;function_type&quot;: &quot;static&quot;,
-            &quot;source&quot;: {
-                &quot;line&quot;: 69,
-                &quot;path&quot;: &quot;src/useErrorBoundary.lua&quot;
-            }
-        },
         {
             &quot;name&quot;: &quot;withErrorBoundary&quot;,
             &quot;desc&quot;: &quot;This is a higher-order component that makes it easy to add an error boundary to an existing component. See\n[ErrorIn1SecondHOC](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ErrorIn1SecondHOC.story.lua) for a full example.\n\n:::note\nIf using luau strict mode, the component must be typed using `local Component: React.FC&lt;{ &lt;prop-types&gt; }&gt; = function(props)`\nfor types to work.\n:::&quot;,
@@ -129,10 +113,46 @@ See [ErrorBoundary](/api/ErrorBoundary) for the main component usage."><link dat
                 &quot;line&quot;: 18,
                 &quot;path&quot;: &quot;src/withErrorBoundary.lua&quot;
             }
+        },
+        {
+            &quot;name&quot;: &quot;useErrorBoundary&quot;,
+            &quot;desc&quot;: &quot;Convenient hook for imperatively invoking or resetting error boundaries.\n\n#### Invoking the nearest error boundary from an event handler\n\nReact only handles errors thrown during render or during component lifecycle methods (e.g., useEffect, componentDidMount).\nError thrown in event handlers or in separate lua threads will not be automatically caught.\n\nA convenient pattern is to invoke the nearest error boundary when an error occurs in event handlers or in separate lua threads.\n\n```lua\n\tlocal Example: React.FC&lt;{}&gt; = function()\n\t\tlocal errorBoundary = useErrorBoundary()\n\n\t\tuseEffect(function()\n\t\t\t-- Using promises\n\t\t\tfetchPlayerData(name):andThen(function(res)\n\t\t\t\t-- Set data in state to rerender\n\t\t\tend):catch(function(error)\n\t\t\t\t-- Our promise failed, so invoke the nearest error boundary to handle the error\n\t\t\t\terrorBoundary.showBoundary(error)\n\t\t\tend)\n\n\t\t\t-- Using pcall\n\t\t\ttask.defer(function()\n\t\t\t\tlocal success, res = pcall(function()\n\t\t\t\t\t-- Do something that might throw an error\n\t\t\t\tend)\n\n\t\t\t\tif not success then\n\t\t\t\t\terrorBoundary.showBoundary(res)\n\t\t\t\tend\n\t\t\tend)\n\t\tend)\n\n\t\t-- Render ...\n\tend\n```\n\n#### Resetting the nearest error boundary\n\n`resetBoundary()` requests the nearest boundary to retry the render that originally failed and if passed,\ninvokes the boundary&#x27;s `onReset` callback.\n\nA pattern is to just retry the render blindly and hope it succeeds on the second try. See\n[RetryError](https://github.com/chriscerie/react-error-boundary/blob/main/stories/RetryError.story.lua) for a full example.\n\nA more common pattern is to revert some state and retry the render with the reverted state. See\n[ResetCount](https://github.com/chriscerie/react-error-boundary/blob/main/stories/ResetCount.story.lua) for a full example.&quot;,
+            &quot;params&quot;: [],
+            &quot;returns&quot;: [
+                {
+                    &quot;desc&quot;: &quot;&quot;,
+                    &quot;lua_type&quot;: &quot;UseErrorBoundaryApi&lt;E&gt;\n&quot;
+                }
+            ],
+            &quot;function_type&quot;: &quot;static&quot;,
+            &quot;source&quot;: {
+                &quot;line&quot;: 69,
+                &quot;path&quot;: &quot;src/useErrorBoundary.lua&quot;
+            }
         }
     ],
     &quot;properties&quot;: [],
     &quot;types&quot;: [
+        {
+            &quot;name&quot;: &quot;UseErrorBoundaryApi&lt;E&gt;&quot;,
+            &quot;desc&quot;: &quot;&quot;,
+            &quot;fields&quot;: [
+                {
+                    &quot;name&quot;: &quot;resetBoundary&quot;,
+                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;showBoundary&quot;,
+                    &quot;lua_type&quot;: &quot;(error: E) -&gt; ()&quot;,
+                    &quot;desc&quot;: &quot;&quot;
+                }
+            ],
+            &quot;source&quot;: {
+                &quot;line&quot;: 12,
+                &quot;path&quot;: &quot;src/useErrorBoundary.lua&quot;
+            }
+        },
         {
             &quot;name&quot;: &quot;ErrorBoundaryContextType&quot;,
             &quot;desc&quot;: &quot;&quot;,
@@ -177,26 +197,6 @@ See [ErrorBoundary](/api/ErrorBoundary) for the main component usage."><link dat
                 &quot;line&quot;: 33,
                 &quot;path&quot;: &quot;src/types.lua&quot;
             }
-        },
-        {
-            &quot;name&quot;: &quot;UseErrorBoundaryApi&lt;E&gt;&quot;,
-            &quot;desc&quot;: &quot;&quot;,
-            &quot;fields&quot;: [
-                {
-                    &quot;name&quot;: &quot;resetBoundary&quot;,
-                    &quot;lua_type&quot;: &quot;() -&gt; ()&quot;,
-                    &quot;desc&quot;: &quot;&quot;
-                },
-                {
-                    &quot;name&quot;: &quot;showBoundary&quot;,
-                    &quot;lua_type&quot;: &quot;(error: E) -&gt; ()&quot;,
-                    &quot;desc&quot;: &quot;&quot;
-                }
-            ],
-            &quot;source&quot;: {
-                &quot;line&quot;: 12,
-                &quot;path&quot;: &quot;src/useErrorBoundary.lua&quot;
-            }
         }
     ],
     &quot;name&quot;: &quot;ReactErrorBoundary&quot;,
@@ -206,7 +206,7 @@ See [ErrorBoundary](/api/ErrorBoundary) for the main component usage."><link dat
         &quot;path&quot;: &quot;src/init.lua&quot;
     }
 }</pre></details></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#types" class="table-of-contents__link toc-highlight">Types</a><ul><li><a href="#ErrorBoundaryContextType" class="table-of-contents__link toc-highlight">ErrorBoundaryContextType</a></li><li><a href="#FallbackProps" class="table-of-contents__link toc-highlight">FallbackProps</a></li><li><a href="#UseErrorBoundaryApi&lt;E&gt;" class="table-of-contents__link toc-highlight">UseErrorBoundaryApi<e></e></a></li></ul></li><li><a href="#properties" class="table-of-contents__link toc-highlight">Properties</a></li><li><a href="#functions" class="table-of-contents__link toc-highlight">Functions</a><ul><li><a href="#useErrorBoundary" class="table-of-contents__link toc-highlight">.useErrorBoundary</a></li><li><a href="#withErrorBoundary" class="table-of-contents__link toc-highlight">.withErrorBoundary</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/react-error-boundary/docs/intro">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/react-error-boundary/docs/GettingStarted">Getting Started</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/chriscerie/react-error-boundary" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/chriscerie/react-error-boundary/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="footer__link-item">License<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2023 chriscerie. Built with Moonwave and Docusaurus.</div></div></div></footer></div>
-<script src="/react-error-boundary/assets/js/runtime~main.74f4fbdf.js"></script>
-<script src="/react-error-boundary/assets/js/main.1193b8e0.js"></script>
+<script src="/react-error-boundary/assets/js/runtime~main.3f298558.js"></script>
+<script src="/react-error-boundary/assets/js/main.87ec36c4.js"></script>
 </body>
 </html>
