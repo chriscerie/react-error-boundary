@@ -1,7 +1,7 @@
 [package]
 name = "chriscerie/react-error-boundary"
 description = "A robust error boundary library for Lua React."
-version = "0.1.0"
+version = "0.2.0"
 license = "MIT"
 authors = ["chriscerie"]
 registry = "https://github.com/UpliftGames/wally-index"
@@ -9,8 +9,8 @@ realm = "shared"
 
 [dependencies]
 TestEZ = "roblox/testez@^0.4"
-React ="core-packages/react@17.0.1-rc.16"
-ReactRoblox = "core-packages/react-roblox@17.0.1-rc.16"
-LuauPolyfill = "core-packages/luau-polyfill@^1.1"
-Collections = "core-packages/collections@^1.1"
+React ="jsdotlua/react@^17"
+ReactRoblox = "jsdotlua/react-roblox@^17"
+LuauPolyfill = "jsdotlua/luau-polyfill@^1.2"
+Collections = "jsdotlua/collections@^1.2"
 Sift = "csqrl/sift@^0.0"
